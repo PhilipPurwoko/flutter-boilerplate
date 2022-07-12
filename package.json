@@ -1,0 +1,25 @@
+{
+  "name": "flutter_boilerplate",
+  "version": "1.0.0",
+  "description": "Flutter boilerplate project for faster start",
+  "scripts": {
+    "clean": "flutter clean && flutter pub get",
+    "clean:build:prod": "flutter clean && flutter pub get && flutter build apk --flavor prod -t lib/main_prod.dart --release",
+    "clean:build:dev": "flutter clean && flutter pub get && flutter build apk --flavor dev --release",
+    "build:prod": "flutter build apk --flavor prod -t lib/main_prod.dart --release",
+    "build:dev": "flutter build apk --flavor dev --release",
+    "flavor": "flutter pub run flutter_flavor:main",
+    "serialize": "flutter pub run build_runner build",
+    "serialize:force": "flutter pub run build_runner build --delete-conflicting-outputs",
+    "rename": "flutter pub run change_app_package_name:main",
+    "icon": "flutter pub run flutter_launcher_icons:main",
+    "pub:validate": "flutter pub run dependency_validator",
+    "pub:upgrade": "flutter pub upgrade --major-versions",
+    "analyze": "flutter pub run dart_code_metrics:metrics analyze lib",
+    "analyze:unused-file": "flutter pub run dart_code_metrics:metrics check-unused-files lib",
+    "analyze:unused-codes": "flutter pub run dart_code_metrics:metrics check-unused-code lib"
+  },
+  "keywords": [],
+  "author": "Philip Purwoko",
+  "license": "MIT"
+}
